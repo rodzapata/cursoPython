@@ -1,0 +1,66 @@
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family: sans-serif;
+    background-color: #efefef;
+}
+header{
+    background-color: #364552;
+    color: white;
+    padding: 3rem 2rem;
+}
+header h1{
+    font-size: 4rem;
+    text-align: center;
+}
+h2{
+    color: orangered;
+}
+
+/* General table styling */
+table {
+    width: 100%; /* Ajusta la tabla al 100% del contenedor */
+    border-collapse: collapse; /* Elimina espacios entre bordes */
+    margin: 20px 0; /* Margen para separar la tabla de otros elementos */
+    font-size: 16px; /* Tamaño de fuente */
+    font-family: Arial, sans-serif; /* Fuente legible */
+    text-align: left; /* Alineación del texto */
+}
+
+/* Table header */
+thead th {
+    background-color: #4CAF50; /* Color de fondo del encabezado */
+    color: white; /* Color del texto */
+    padding: 12px 15px; /* Espaciado interno */
+    border: 1px solid #ddd; /* Borde entre las celdas */
+    text-transform: uppercase; /* Texto en mayúsculas */
+}
+
+/* Table body rows */
+tbody tr:nth-child(odd) {
+    background-color: #f9f9f9; /* Color de fondo de las filas impares */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #ffffff; /* Color de fondo de las filas pares */
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1; /* Color al pasar el mouse */
+}
+
+/* Table cells */
+td {
+    padding: 10px 15px; /* Espaciado interno */
+    border: 1px solid #ddd; /* Borde entre las celdas */
+    color: #333; /* Color del texto */
+}
+
+/* Add a border to the table */
+table {
+    border: 1px solid #ddd; /* Borde general */
+    border-radius: 5px; /* Bordes redondeados */
+    overflow: hidden; /* Oculta el desbordamiento en las esquinas redondeadas */
+}
