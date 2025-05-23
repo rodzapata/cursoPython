@@ -17,6 +17,11 @@
         <li><a href="cursoPython.html#referencia">Referencias</a></li>
         <li><a href="cursoPython.html#instalacion">Instalacion</a></li>
         <li><a href="cursoPython.html#Listas">Listas</a></li>
+        <li><a href="cursoPython.html#variables">Variables</a></li>
+        <li><a href="cursoPython.html#estructura-datos">estructuras de datos</a></li>
+        <li><a href="cursoPython.html#crud-dyango">CRUD Dyango</a></li>
+        <li><a href="cursoPython.html#FastAPI">FastAPI</a></li>
+        <li><a href="cursoPython.html#estructura-proyecto">estructura del proyecto</a></li>
 
     </ul>
 
@@ -25,21 +30,30 @@
     <hr>
     <h2 id="referencia">Referencias</h2>
     <article>
-        la documentacin oficial de python <a href="https://docs.python.org/3/" target="_blank" rel="noopener noreferrer">Documentacion</a>        
+        la documentacin oficial de python <a href="https://docs.python.org/3/" target="_blank"
+            rel="noopener noreferrer">Documentacion</a> Tambien debemos aprender a usar el ORM de python
+            llamado <a href="https://misovirtual.virtual.uniandes.edu.co/codelabs/tutorial-SQLAlchemy-Python-ejemplo/#0" target="_blank" 
+            rel="noopener noreferrer">SQLAlchemy Tutorial Universidad de los Andes</a> <br>
+            y la pagina oficial del ORM es <a href="https://www.sqlalchemy.org/" target="_blank" rel="noopener noreferrer">https://www.sqlalchemy.org/</a> <br>
+            FastAPI con Mysql <a href="https://www.youtube.com/watch?v=6eVj33l5e9M" target="_blank" rel="noopener noreferrer">FastAPI y Mysql</a> <br>
+            Tambien existe otro ORM que es muy recomendado <a href="https://docs.pydantic.dev/latest/" target="_blank" rel="noopener noreferrer">Pydantic</a>
+            
     </article>
 
     <a href="cursoPython.html">⏫</a>
     <hr>
     <h2 id="instalacion">instalacion</h2>
     <article>
-
+        primero vamos a descargar el instalador de sql express 2022 desde el portal
+         <a href="https://www.microsoft.com/en-us/sql-server/sql-server-downloads" target="_blank" rel="noopener noreferrer">SQL express 2022</a>
     </article>
 
     <a href="cursoPython.html">⏫</a>
     <hr>
     <h2 id="listas">Listas</h2>
     <article>
-        La lista es la estructura mas vacica de Python, son mutables es decir no es necesario definirlo con un tamaño fijo, y se puede modificar 
+        La lista es la estructura mas vacica de Python, son mutables es decir no es necesario definirlo con un tamaño
+        fijo, y se puede modificar
         la informacion, como adicionar, eliminar y modificar con los comandos (append, remove o pop ) <br>
         <pre>
 
@@ -52,7 +66,8 @@
             familia.append("elkin jose")
             print(familia)        
         </pre>
-        se puede adicianar al final de la lista usando <strong>append</strong> o especifiando la posicion <strong>[-1]</strong> ejemplo: <br>
+        se puede adicianar al final de la lista usando <strong>append</strong> o especifiando la posicion
+        <strong>[-1]</strong> ejemplo: <br>
         <pre>
             familia.append("elkin jose")
             print(familia)        
@@ -101,7 +116,8 @@
             print(subfamilia)
 
         </pre>
-        Ejercicio de agregar una lista frutas y si ya existe una determinada fruta eliminarla despues ver el resultado y recorrer 
+        Ejercicio de agregar una lista frutas y si ya existe una determinada fruta eliminarla despues ver el resultado y
+        recorrer
         la lista con un ciclo for <br>
         <pre>
             listFrutas=["uva","pera","manzana","banana"]
@@ -122,6 +138,147 @@
 
     </article>
 
+    <a href="cursoPython.html">⏫</a>
+    <hr>
+    <h2 id="variable">Variable</h2>
+    <article>
+        las variables se pueden asignar en una sola linea
+        <pre>
+            a=1
+            b=2
+            print(a)
+            print(b)
+        
+            #en una sola linea asignamos los dos valores
+            print("asignamos varios variable en una sola linea ")
+            a,b = 2, 3
+            print(a)
+            print(b)
+        
+            print("serie fibonacci 0112358 ")
+            a, b =0, 1
+            while a &lt; 10 :
+                print(a)
+                a, b = b, a+b
+
+        </pre>
+
+    </article>
+
+    <a href="cursoPython.html">⏫</a>
+    <hr>
+    <h2 id="estructura-datos">Estructura de datos</h2>
+    <article>
+        las estructuras de datos en python son: lista[], tuplas(), set {} o colecciones , diccionarios {key: valor} <br>
+        <pre>
+            #listas pemite valores duplicados
+            numero=[1,2,3,4,5,4,2]
+            print(numero)
+
+            #conjunto Set no permite valores duplicados, como el 3 esta 2 veces solo deja uno
+            numero2={1,2,3,3,4}
+            print(numero2)
+
+            print("--convertirmos una List a un Set de Coleccion elimandose los valores repetidos")
+            valoresUnicos=set(numero)
+            print(valoresUnicos)
+
+            #tupla valores costantes que no se puede modificar 
+            cordenada=(10,20)
+
+            #dicionario
+            print("--diccinarios ")
+            persona={"nombre": "rodney", "edad":50}
+            print(persona)
+
+        </pre>
+
+    </article>
+    
+    <a href="cursoPython.html">⏫</a>
+    <hr>
+    <h2 id="crud-dyango">CRUD Dyango</h2>
+    <article>
+        tutorial de <a href="https://www.youtube.com/watch?v=e6PkGDH4wWA&t=22s" target="_blank" rel="noopener noreferrer">CRUD por Fazt</a> <br>
+
+
+    </article>
+
+    <a href="cursoPython.html">⏫</a>
+    <hr>
+    <h2 id="FastAPI">FastAPI</h2>
+    <article>
+        FastAPi nos ayuda a crear una API Rest con Python, los pasos para trabajar con eta libreria seria:
+        <ul>
+            <li><a href="cursoPython.html#entorno-virtual-crear">Creamos un entorno virtual de Desarrollo</a></li>
+            <li><a href="cursoPython.html#entorno-virtual-activar">Activar entorno virtual de Desarrollo</a></li>
+            <li><a href="cursoPython.html#entorno-virtual-instalar-dependencias">Instalar Dependencias en entorno virtual de Desarrollo</a></li>
+            <li><a href="cursoPython.html#main.py">creamos el proyecto main.py</a></li>
+        </ul>
+    <h3 id="entorno-virtual-crear">Creamos entorno virtual</h2>
+    <article>
+        Desde la terminal que se encuentra dentro del Visual studio escribimos: <br>
+        <pre>
+            python -m venv venv
+        </pre>
+        Esto crea una carpeta venv que es donde instalaremos todas las dependencias de nuestro proyecto. <br>
+        Ahora debemos activar nuestra carpeta virtual:
+        <pre>
+            en windoes hay que abrir cmd y escribir:
+            ven\cripts\activate
+        </pre>
+        <pre>
+            en linux desde la termila hay que escribir:
+             source venv/bin/activate
+        </pre>
+        ahora instalamos FastAPI en el entorno virtual activo desde Cmd escribimos:
+        <pre>
+             pip install fastapi uvicorn
+        </pre>
+        cuando instale el fastapi me salio que debia actualizar el <strong>pip</strong>
+        de la siguiente forma:
+        <pre>
+            python -m pip install --upgrade pip
+        </pre>
+        nota: <br>
+        no me dejaba instalar el entorno desde la terminal de visual studio me todo escribir lo siguiente: <br>
+        <pre>
+            Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
+
+        </pre>
+        Ejecutamos el proyecto escribiendo :
+        <pre>
+            uvicorn main:app
+        </pre>
+        si queremos que el servicio se mantenga abierta debemos escribir : 
+        <pre>
+            uvicorn main:app --reload
+        </pre>
+        Instalamos el driver de posgretSql de la siguiente forma:
+        <pre>
+            pip install psycopg
+        </pre>
+        La instalacion del psycopg no se instala correctamente con esta verion, toco instalarlo de la siguiente forma:
+        <pre>
+            pip install "psycopg[binary]"
+        </pre>
+        El driver para sqlexpress 2022 debemos inatalar lo siguiente:
+        <pre>
+            pip install pyodbc
+        </pre>
+        para verificar si tego la version instalada se escribe:
+        <pre>
+            psql --version
+        </pre>
+    </article>
+
+    <a href="cursoPython.html">⏫</a>
+    <hr>
+    <h2 id="estructura-proyecto">Estructura del Proyecto</h2>
+    <article>
+        se recomienda crear las siguientes carmpetas: Models, Config, routes, schemas <br>
+
+    </article>
 
 </body>
 
